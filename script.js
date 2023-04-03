@@ -1,9 +1,13 @@
 let now = new Date();
+//let now = new Date(2023,11, 17);
 now.setHours(0,0,0,0);
+
 let day = -1;
 let  month = -1;
 month =  now.getMonth();
 day   =  now.getDate();
+console.log(month);
+console.log(day);
 
 const qEndDates = [new Date(now.getFullYear(), 2, 31),
                    new Date(now.getFullYear(), 5, 30),
@@ -28,11 +32,13 @@ function highlightText(q){
   delta.innerText = Math.round(Difference_In_Days);
 
 }
-if (month < 4 ){
+
+/* 012 345 678 9 10 11 */
+if (month < 3 ){
   highlightText(1);
-} else if (month < 7){
+} else if (month > 2 && month < 6){
   highlightText(2);
-} else if (month < 10){
+} else if (month > 5 && month < 9){
   highlightText(3);
 } else {
   highlightText(4);

@@ -664,9 +664,3 @@ video {
     margin: auto;
   }
 }
-
-@media (min-width: 768px) {
-  .md\:m-auto {
-    margin: auto;
-  }
-}
